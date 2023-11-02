@@ -17,6 +17,8 @@ class StudentDataModel {
   String? name;
   String? email;
   String? gender;
+  String? createdAt;
+  String? updatedAt;
 
   Map<String, dynamic> toJson() {
     final map = <String, dynamic>{};
@@ -24,6 +26,8 @@ class StudentDataModel {
     map['name'] = name;
     map['email'] = email;
     map['gender'] = gender;
+    map['created_at'] = createdAt;
+    map['updated_at'] = updatedAt;
     return map;
   }
 }
