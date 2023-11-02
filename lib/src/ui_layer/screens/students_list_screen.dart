@@ -7,6 +7,7 @@ import 'package:nsl_task/src/nsl_task_app.dart';
 import 'package:nsl_task/src/ui_layer/helpers/progress_helper.dart';
 import 'package:nsl_task/src/ui_layer/helpers/screen_navigation_helper.dart';
 import 'package:nsl_task/src/ui_layer/screens/add_students_screen.dart';
+import 'package:nsl_task/src/ui_layer/widgets/progress_bar_widget.dart';
 import 'package:nsl_task/src/ui_layer/widgets/students_card_widget.dart';
 
 class StudentsListScreen extends StatefulWidget {

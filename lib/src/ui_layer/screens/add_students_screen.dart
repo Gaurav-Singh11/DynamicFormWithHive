@@ -207,6 +207,8 @@ class _AddStudentsScreenState extends State<AddStudentsScreen> {
     _studentDataModel?.name = _nameController.text.trim();
     _studentDataModel?.email = _emailController.text.trim();
     _studentDataModel?.gender = _gender[_groupValue];
+    _studentDataModel?.createdAt = DateTime.now().toString();
+    _studentDataModel?.updatedAt = DateTime.now().toString();
     await UserStateHiveHelper.instance.saveStudent(_studentDataModel);
     Loader.close(context);
     Navigator.pop(context, true);
@@ -218,6 +220,8 @@ class _AddStudentsScreenState extends State<AddStudentsScreen> {
     _studentDataModel?.name = _nameController.text.trim();
     _studentDataModel?.email = _emailController.text.trim();
     _studentDataModel?.gender = _gender[_groupValue];
+    _studentDataModel?.createdAt = widget.studentDataModel?.createdAt;
+    _studentDataModel?.updatedAt = DateTime.now().toString();
     await UserStateHiveHelper.instance.saveStudent(_studentDataModel);
     Loader.close(context);
     Navigator.pop(context, true);
