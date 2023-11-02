@@ -4,6 +4,8 @@ class StudentDataModel {
     this.name,
     this.email,
     this.gender,
+    this.createdAt,
+    this.updatedAt,
   });
 
   StudentDataModel.fromJson(dynamic json) {
@@ -11,6 +13,8 @@ class StudentDataModel {
     name = json['name'];
     email = json['email'];
     gender = json['gender'];
+    createdAt = json['created_at'];
+    updatedAt = json['updated_at'];
   }
 
   String? id;

@@ -179,26 +179,25 @@ class _AddStudentsScreenState extends State<AddStudentsScreen> {
   }
 
   Widget addRadioButton(int btnValue, String title) {
-    return Consumer<StudentProvider>(builder: (_, __, ___) {
-      return Row(
-        mainAxisAlignment: MainAxisAlignment.start,
-        children: <Widget>[
-          Radio(
-            activeColor: AppColors.blackColor,
-            value: btnValue,
-            groupValue: _groupValue,
-            onChanged: (value) {
-              _groupValue = btnValue;
-              _studentProvider.refreshState();
-            },
-          ),
-          Text(
+    return Expanded(
+      child: Consumer<StudentProvider>(builder: (_, __, ___) {
+        return RadioListTile(
+          contentPadding: AppStyles.pd0,
+          splashRadius: 0,
+          activeColor: AppColors.blackColor,
+          value: btnValue,
+          groupValue: _groupValue,
+          title: Text(
             title,
             style: AppStyles.regularTextStyle(),
-          )
-        ],
-      );
-    });
+          ),
+          onChanged: (value) {
+            _groupValue = btnValue;
+            _studentProvider.refreshState();
+          },
+        );
+      }),
+    );
   }
 
   Future<void> _handleSaveStudent() async {
