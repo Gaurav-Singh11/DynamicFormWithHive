@@ -117,16 +117,6 @@ class _EditStudentScreenState extends State<EditStudentScreen> {
     );
   }
 
-  Widget _headlineWidget() {
-    return Text(
-      "* All fields are mandatory. ",
-      style: AppStyles.semiBoldSecondTextStyle(
-        color: AppColors.blackColor,
-        fontSize: 15,
-      ),
-    );
-  }
-
   Widget _titleWidget(String title) {
     return Text(
       title,
