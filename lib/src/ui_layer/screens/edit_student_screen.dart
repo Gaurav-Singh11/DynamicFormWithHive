@@ -24,7 +24,7 @@ class _EditStudentScreenState extends State<EditStudentScreen> {
   late StudentProvider _studentProvider;
   final _nameController = TextEditingController();
   final _emailController = TextEditingController();
-  final _gender = <String>["Male", "Female", "Other"];
+  final _gender = <String>["Male", "Female"];
   int _groupValue = -1;
   bool _isEditMode = false;
   StudentDataModel? _studentDataModel = StudentDataModel();
@@ -93,7 +93,6 @@ class _EditStudentScreenState extends State<EditStudentScreen> {
             children: <Widget>[
               addRadioButton(0, 'Male'),
               addRadioButton(1, 'Female'),
-              addRadioButton(2, 'Other'),
             ],
           ),
           AppStyles.sbHeight10,

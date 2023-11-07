@@ -89,21 +89,18 @@ class _AddStudentsScreenState extends State<AddStudentsScreen> {
         child: Column(
           children: [
             Expanded(
-              child: Padding(
-                padding: const EdgeInsets.symmetric(vertical: 10),
-                child: ListView.separated(
-                  physics: const ClampingScrollPhysics(),
-                  padding: AppStyles.screenHorizontalPadding,
-                  itemBuilder: (context, index) {
-                    return DynamicFormWidget(
-                      dataModel: _students[index],
-                    );
-                  },
-                  separatorBuilder: (context, index) {
-                    return AppStyles.sbHeight20;
-                  },
-                  itemCount: _students.length,
-                ),
+              child: ListView.separated(
+                physics: const ClampingScrollPhysics(),
+                padding: AppStyles.pd20,
+                itemBuilder: (context, index) {
+                  return DynamicFormWidget(
+                    dataModel: _students[index],
+                  );
+                },
+                separatorBuilder: (context, index) {
+                  return AppStyles.sbHeight20;
+                },
+                itemCount: _students.length,
               ),
             ),
             AppStyles.sbHeight10,

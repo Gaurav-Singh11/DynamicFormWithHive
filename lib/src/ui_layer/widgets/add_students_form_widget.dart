@@ -19,7 +19,7 @@ class DynamicFormWidget extends StatefulWidget {
 class _DynamicFormWidgetState extends State<DynamicFormWidget> {
   final _nameController = TextEditingController();
   final _emailController = TextEditingController();
-  final _gender = <String>["Male", "Female", "Other"];
+  final _gender = <String>["Male", "Female"];
   int _groupValue = -1;
   late StudentProvider _studentProvider;
 
@@ -45,7 +45,7 @@ class _DynamicFormWidgetState extends State<DynamicFormWidget> {
     return Container(
       decoration: AppStyles.boxDecorationWithShadow(AppColors.whiteColor, 20),
       width: double.infinity,
-      padding: AppStyles.pd8,
+      padding: AppStyles.pd15,
       child: _addStudentsScrollView(),
     );
   }
@@ -55,7 +55,6 @@ class _DynamicFormWidgetState extends State<DynamicFormWidget> {
       crossAxisAlignment: CrossAxisAlignment.start,
       mainAxisAlignment: MainAxisAlignment.start,
       children: [
-        AppStyles.sbHeight10,
         _titleWidget("Name *"),
         AppStyles.sbHeight5,
         _nameFieldWidget(),
@@ -71,10 +70,8 @@ class _DynamicFormWidgetState extends State<DynamicFormWidget> {
           children: <Widget>[
             addRadioButton(0, 'Male'),
             addRadioButton(1, 'Female'),
-            addRadioButton(2, 'Other'),
           ],
         ),
-        AppStyles.sbHeight10,
       ],
     );
   }
