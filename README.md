@@ -5,7 +5,7 @@ Use Hive/SQLite as a local db
 - Includes a floating action button with an add icon, which opens the "Add Students" screen when tapped.
 - The "Edit" option opens the "Edit Student" screen to update student information.
 - The "Delete" option opens a delete confirmation popup with "Yes" and "No" options. 
-- If the user selects "Yes," the student is deleted from local db.
+- If the user selects "Yes", the student is deleted from local db.
 
 2. Add Students Screen:
 - Initially displays a form with fields for email, name, and gender for adding a new student.
