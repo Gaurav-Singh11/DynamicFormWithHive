@@ -1,4 +1,5 @@
-Use Hive/SQLite as a local db
+Use Hive/SQLite as a local DB
+
 1. Students List Screen:
 - Displays a list of student cards with the following details: name, email, gender.
 - Provides options for editing and deleting each student.
